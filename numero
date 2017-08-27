@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+dir = ARGV[0] || "."
+
+files = Dir["#{dir}/**/*"].select {|file|
+  File.file?(file)
+}
+
+puts files.size
